@@ -6,6 +6,7 @@ A Python script for cloning an AWS IAM role—including its trust policies, inli
 - **Clones Trust Policies:** Copies the source role’s trust policy.
 - **Inline Policies:** Retrieves and clones all inline policies attached to the source role.
 - **Managed Policies:** Attaches all managed policies from the source role to the new role.
+- **Create Tag:** A tag (clonedFrom) is created to the cloned role with the source role name as value. 
 - **Automatic Naming:** Defaults to `<source_role>_cloned` when no new role name is provided.
 
 ## Prerequisites
@@ -20,6 +21,7 @@ A Python script for cloning an AWS IAM role—including its trust policies, inli
 	-	iam:PutRolePolicy
 	-	iam:ListAttachedRolePolicies
 	-	iam:AttachRolePolicy
+    -   iam.tag_role
 
 ## Installation & Usage
 
