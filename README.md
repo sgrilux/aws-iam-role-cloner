@@ -25,8 +25,8 @@ A Python script for cloning an AWS IAM role—including its trust policies, inli
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/clone-iam-role.git
-cd clone-iam-role
+git clone https://github.com/sgrilux/aws-iam-role-cloner.git
+cd aws-iam-role-cloner
 ```
 
 **Make the script executable (on Unix/Linux):**
@@ -35,14 +35,14 @@ chmod +x clone_iam_role.py
 ```
 
 **Create the Virtual Environment**
-  ```bash
-  python3 -m venv venv
-  ```
+```bash
+python3 -m venv venv
+```
 
 **Activate the Virtual Environment**
-  ```bash
-  source venv/bin/activate
-  ```
+```bash
+source venv/bin/activate
+```
 
 **Install Dependencies**
 Once the virtual environment is activated, install the required libraries:
