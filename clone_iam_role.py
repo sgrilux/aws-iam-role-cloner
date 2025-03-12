@@ -65,6 +65,17 @@ def clone_iam_role(source_role: str, new_role: str) -> None:
         print(f"Error cloning attached policies: {e}")
         sys.exit(1)
 
+    # Add Tag to the new role with the value of the source role
+    try:
+        iam.tag_role(
+            RoleName=new_role,
+            Tags=[{"Key": "clonedFrom", "Value": source_role}],
+        )
+        print(f"Added tag to the new role: {new_role}") 
+    except ClientError as e:
+        print(f"Error adding tag to the new role: {e}")
+        sys.exit(1)
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Clone an AWS IAM role.")
