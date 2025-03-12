@@ -1,6 +1,6 @@
 # AWS IAM Role Cloner
 
-A Python script for cloning an AWS IAM role—including its trust policies, inline policies, and attached managed policies—using Python 3.10+ features such as type hints.
+A Python script for cloning an AWS IAM role—including its trust policies, inline policies, and attached managed policies.
 
 ## Features
 - **Clones Trust Policies:** Copies the source role’s trust policy.
